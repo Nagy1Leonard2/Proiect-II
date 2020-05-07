@@ -62,36 +62,45 @@ namespace LogIn
 			{
 			
 				myString = da.GetInt32(0).ToString();
-				MessageBox.Show(myString);
+
+				if ((textBox1.Text == "") && (textBox2.Text == ""))
+				{
+					MessageBox.Show("Username & password fields cannot be empty.");
+				}
+				else if (textBox1.Text == "")
+				{
+					MessageBox.Show("Please enter your username.");
+				}
+				else if (textBox2.Text == "")
+				{
+					MessageBox.Show("Please enter your password.");
+				}
+				//============================================
+				else if ((myString == "0") || (myString == "1"))
+				{
+					if (myString == "0")
+					{
+						MessageBox.Show("User");
+					}
+					else if(myString == "1")
+					{
+						MessageBox.Show("Admin");
+
+					}
+					Home y = new Home();
+					y.Show();
+					this.Hide();
+				}
+				//============================================
+				else
+				{
+					MessageBox.Show("Wrong credentials.");
+				}
+
+			}
 
 
-			}
-
-
-			if ((textBox1.Text == "") && (textBox2.Text == ""))
-			{
-				MessageBox.Show("Username & password fields cannot be empty.");
-			}
-			else if (textBox1.Text == "")
-			{
-				MessageBox.Show("Please enter your username.");
-			}
-			else if (textBox2.Text == "")
-			{
-				MessageBox.Show("Please enter your password.");
-			}
-			//============================================
-			else if ((myString == "0") || (myString == "1"))
-			{
-				Home y = new Home();
-				y.Show();
-				this.Hide();
-			}
-			//============================================
-			else
-			{
-				MessageBox.Show("Wrong credentials.");
-			}
+			
 		}
 	}
 }
