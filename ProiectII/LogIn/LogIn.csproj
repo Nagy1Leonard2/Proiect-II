@@ -232,5 +232,32 @@
   <ItemGroup>
     <None Include="Resources\MoviePoster.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\film-reel-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filmorange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon8-user-male-52-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-male-52-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-male-52-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title_final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteglass_resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteglasssmall.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

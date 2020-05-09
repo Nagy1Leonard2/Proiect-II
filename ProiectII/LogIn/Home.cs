@@ -90,7 +90,7 @@ namespace LogIn
 		{
 			string connetionString;
 			SqlConnection cnn;
-			connetionString = @"Data Source =DESKTOP-CJRBB7E; Initial Catalog = BookingDB; Integrated Security = True";
+			connetionString = @"Data Source =Aldwych; Initial Catalog = BookingDB; Integrated Security = True";
 			cnn = new SqlConnection(connetionString);
 			cnn.Open();
 
@@ -189,6 +189,11 @@ namespace LogIn
 
 			userControl_Main1.Show();
 			userControl_Main1.BringToFront();
+		}
+
+		private void panel2_Paint(object sender, PaintEventArgs e)
+		{
+
 		}
 	}
 }

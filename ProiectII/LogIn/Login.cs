@@ -33,7 +33,7 @@ namespace LogIn
 
 			string connetionString;
 			SqlConnection cnn;
-			connetionString = @"Data Source =DESKTOP-CJRBB7E; Initial Catalog = UsersDB; Integrated Security = True";
+			connetionString = @"Data Source =Aldwych; Initial Catalog = UsersDB; Integrated Security = True";
 			cnn = new SqlConnection(connetionString);
 			cnn.Open();
 

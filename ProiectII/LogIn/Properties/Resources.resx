@@ -121,25 +121,28 @@
   <data name="bg0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Book.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Booked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Booked.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Empty.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="filmorange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filmorange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HBO_Zoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HBO-Zoom.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon8_user_male_52_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon8-user-male-52-grey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_user_male_52_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-user-male-52-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_user_male_52_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-user-male-52-red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MoviePoster" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MoviePoster.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Title_final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Title_final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="whiteglasssmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteglasssmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

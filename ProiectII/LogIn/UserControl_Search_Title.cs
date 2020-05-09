@@ -35,7 +35,7 @@ namespace LogIn
 		{
 			string connetionString;
 			SqlConnection cnn;
-			connetionString = @"Data Source =DESKTOP-CJRBB7E; Initial Catalog = BookingDB; Integrated Security = True";
+			connetionString = @"Data Source =Aldwych; Initial Catalog = BookingDB; Integrated Security = True";
 			cnn = new SqlConnection(connetionString);
 			cnn.Open();
 
@@ -48,7 +48,7 @@ namespace LogIn
 			sql = "Select Title from Movie where Title=@title";
 
 			command = new SqlCommand(sql, cnn);
-			command.Parameters.AddWithValue("@title", (textBox1.Text));
+			command.Parameters.AddWithValue("@title", (comboBox1.Text));
 			SqlDataReader da = command.ExecuteReader();
 
 			var myString = "";
@@ -58,6 +58,11 @@ namespace LogIn
 				myString = da.GetString(0);
 
 			}
+
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
 
 		}
 	}

@@ -73,29 +73,9 @@ namespace LogIn.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Book {
+        internal static System.Drawing.Bitmap filmorange {
             get {
-                object obj = ResourceManager.GetObject("Book", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Booked {
-            get {
-                object obj = ResourceManager.GetObject("Booked", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Empty {
-            get {
-                object obj = ResourceManager.GetObject("Empty", resourceCulture);
+                object obj = ResourceManager.GetObject("filmorange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +93,36 @@ namespace LogIn.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon8_user_male_52_grey {
+            get {
+                object obj = ResourceManager.GetObject("icon8_user_male_52_grey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_male_52_green {
+            get {
+                object obj = ResourceManager.GetObject("icons8_user_male_52_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_male_52_red {
+            get {
+                object obj = ResourceManager.GetObject("icons8_user_male_52_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MoviePoster {
             get {
                 object obj = ResourceManager.GetObject("MoviePoster", resourceCulture);
@@ -123,9 +133,9 @@ namespace LogIn.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap s {
+        internal static System.Drawing.Bitmap Title_final {
             get {
-                object obj = ResourceManager.GetObject("s", resourceCulture);
+                object obj = ResourceManager.GetObject("Title_final", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +143,9 @@ namespace LogIn.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap search {
+        internal static System.Drawing.Bitmap whiteglasssmall {
             get {
-                object obj = ResourceManager.GetObject("search", resourceCulture);
+                object obj = ResourceManager.GetObject("whiteglasssmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
