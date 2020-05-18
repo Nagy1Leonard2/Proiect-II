@@ -1,0 +1,62 @@
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\bin\Debug\LogIn.exe.config
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\bin\Debug\LogIn.exe
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\bin\Debug\LogIn.pdb
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.csprojAssemblyReference.cache
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.BookingSeatsScreen.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.Home.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.Login.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.Properties.Resources.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.UserControl_DateTime.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Genre.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Main.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Rating.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_DateTime.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Genre.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Rating.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Title.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Title.resources
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.csproj.GenerateResource.cache
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.csproj.CoreCompileInputs.cache
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.exe
+C:\Users\vpopa\Desktop\UNI\ProiectII\LogIn\obj\Debug\LogIn.pdb
+C:\Users\Leo\Desktop\ProiectII\LogIn\bin\Debug\LogIn.exe.config
+C:\Users\Leo\Desktop\ProiectII\LogIn\bin\Debug\LogIn.exe
+C:\Users\Leo\Desktop\ProiectII\LogIn\bin\Debug\LogIn.pdb
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.BookingSeatsScreen.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.Home.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.Login.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.Properties.Resources.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.UserControl_DateTime.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Genre.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Main.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Rating.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_DateTime.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Genre.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Rating.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Title.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Title.resources
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.csproj.GenerateResource.cache
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.exe
+C:\Users\Leo\Desktop\ProiectII\LogIn\obj\Debug\LogIn.pdb
+E:\Proiect II\Clone\ProiectII\LogIn\bin\Debug\LogIn.exe.config
+E:\Proiect II\Clone\ProiectII\LogIn\bin\Debug\LogIn.exe
+E:\Proiect II\Clone\ProiectII\LogIn\bin\Debug\LogIn.pdb
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.BookingSeatsScreen.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.Home.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.Login.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.Properties.Resources.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.UserControl_DateTime.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Genre.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Main.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Rating.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_DateTime.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Genre.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Rating.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Title.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Title.resources
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.csproj.GenerateResource.cache
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.csproj.CoreCompileInputs.cache
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.exe
+E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.pdb
