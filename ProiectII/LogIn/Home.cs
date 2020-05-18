@@ -9,6 +9,19 @@ namespace LogIn
 		public Home()
 		{
 			InitializeComponent();
+			inde = Login.myString;
+			
+			if (inde == "1")
+			{
+				label4.Show();
+				label5.Show();
+
+			}
+			else
+			{
+				label4.Hide();
+				label5.Hide();
+			}
 		}
 		//to do: panel backColor black
 		//to do: logo in the top left corner
@@ -86,11 +99,12 @@ namespace LogIn
 		}
 
 		public static string qt = "";
+		public static string inde = "";
 		private void Home_Load(object sender, EventArgs e)
 		{
 			string connetionString;
 			SqlConnection cnn;
-			connetionString = @"Data Source =Aldwych; Initial Catalog = BookingDB; Integrated Security = True";
+			connetionString = @"Data Source =DESKTOP-CJRBB7E; Initial Catalog = BookingDB; Integrated Security = True";
 			cnn = new SqlConnection(connetionString);
 			cnn.Open();
 
@@ -105,6 +119,21 @@ namespace LogIn
 			userControl_Search_Title1.Hide();
 			userControl_Search_Genre1.Hide();
 			userControl_Search_DateTime1.Hide();
+
+
+			inde = Login.myString;
+			MessageBox.Show(inde);
+			if(inde == "1")
+			{
+				label4.Show();
+				label5.Show();
+				
+			}
+			else
+			{
+				label4.Hide();
+				label5.Hide();
+			}
 		}
 		
 		private void Label1_Click(object sender, EventArgs e)

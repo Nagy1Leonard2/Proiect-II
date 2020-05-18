@@ -10,7 +10,11 @@ namespace LogIn
 		public Login()
 		{
 			InitializeComponent();
+
 		}
+
+		public static string myString = "";
+
 
 		private void Login_Load(object sender, EventArgs e)
 		{
@@ -33,7 +37,7 @@ namespace LogIn
 
 			string connetionString;
 			SqlConnection cnn;
-			connetionString = @"Data Source =Aldwych; Initial Catalog = UsersDB; Integrated Security = True";
+			connetionString = @"Data Source =DESKTOP-CJRBB7E; Initial Catalog = UsersDB; Integrated Security = True";
 			cnn = new SqlConnection(connetionString);
 			cnn.Open();
 
@@ -56,51 +60,51 @@ namespace LogIn
 			command.Parameters.AddWithValue("@pas",(textBox2.Text));
 			SqlDataReader da = command.ExecuteReader();
 
-			var myString = "";
+			
 			
 			while(da.Read())
 			{
 			
 				myString = da.GetInt32(0).ToString();
 
-				if ((textBox1.Text == "") && (textBox2.Text == ""))
-				{
-					MessageBox.Show("Username & password fields cannot be empty.");
-				}
-				else if (textBox1.Text == "")
-				{
-					MessageBox.Show("Please enter your username.");
-				}
-				else if (textBox2.Text == "")
-				{
-					MessageBox.Show("Please enter your password.");
-				}
-				//============================================
-				else if ((myString == "0") || (myString == "1"))
-				{
-					if (myString == "0")
-					{
-						MessageBox.Show("User");
-					}
-					else if(myString == "1")
-					{
-						MessageBox.Show("Admin");
 
-					}
-					Home y = new Home();
-					y.Show();
-					this.Hide();
-				}
-				//============================================
-				else
+			}
+			if ((textBox1.Text == "") && (textBox2.Text == ""))
+			{
+				MessageBox.Show("Username & password fields cannot be empty.");
+			}
+			else if (textBox1.Text == "")
+			{
+				MessageBox.Show("Please enter your username.");
+			}
+			else if (textBox2.Text == "")
+			{
+				MessageBox.Show("Please enter your password.");
+			}
+			//============================================
+			else if ((myString == "0") || (myString == "1"))
+			{
+				/*if (myString == "0")
 				{
-					MessageBox.Show("Wrong credentials.");
+					MessageBox.Show("User");
 				}
+				else if (myString == "1")
+				{
+					MessageBox.Show("Admin");
 
+				}*/
+				Home y = new Home();
+				y.Show();
+				this.Hide();
+			}
+			//============================================
+			else
+			{
+				MessageBox.Show("Wrong credentials.");
 			}
 
 
-			
+
 		}
 	}
 }
