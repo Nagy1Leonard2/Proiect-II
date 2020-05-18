@@ -10,64 +10,43 @@ namespace LogIn
 		public Login()
 		{
 			InitializeComponent();
-
 		}
 
 		public static string myString = "";
 
-
 		private void Login_Load(object sender, EventArgs e)
 		{
-			
-
+			//Opaque background for the panel:
 			panel1.BackColor = Color.FromArgb(200, 0, 0, 0);
 		}
 
 		private void Label4_Click(object sender, EventArgs e)
 		{
+			//Close the App on X_label click:
 			Close();
 		}
+
 		// LogIn Function
 		private void Button1_Click(object sender, EventArgs e)
 		{
-			//to do: custom error messageBoxes
-			//to do: connection to the users db
-			//to do: add logo icon on the top left corner
-			//to do: this.Close after Home is opened (not only this.hide)
-
-			string connetionString;
-			SqlConnection cnn;
-			connetionString = @"Data Source =DESKTOP-CJRBB7E; Initial Catalog = UsersDB; Integrated Security = True";
-			cnn = new SqlConnection(connetionString);
+			//Sql Conenction:
+			SqlConnection cnn = new SqlConnection(@"Data Source = LPTVIVIANACSA\SQLSERVER01; Initial Catalog = UsersDB; Integrated Security = True");
 			cnn.Open();
 
-			SqlCommand command;
-			//SqlDataReader dataReader;
-			String sql;
+			//Select statement to retrieve if the user is Admin or not:
+			SqlCommand command0 = new SqlCommand("Select Rights from Users where Username = @use  and Password = @pas", cnn);
 			SqlParameter use = new SqlParameter();
 			SqlParameter pas = new SqlParameter();
-
 			use.ParameterName = "@use";
 			pas.ParameterName = "@pas";
+			command0.Parameters.AddWithValue("@use",(textBox1.Text));
+			command0.Parameters.AddWithValue("@pas",(textBox2.Text));
 
-			
-
-			sql = "Select Rights from Users where Username=@use  and Password=@pas";
-
-
-				 command = new SqlCommand(sql,cnn);
-			command.Parameters.AddWithValue("@use",(textBox1.Text));
-			command.Parameters.AddWithValue("@pas",(textBox2.Text));
-			SqlDataReader da = command.ExecuteReader();
-
-			
-			
+			//SqlDataReader:
+			SqlDataReader da = command0.ExecuteReader();
 			while(da.Read())
 			{
-			
 				myString = da.GetInt32(0).ToString();
-
-
 			}
 			if ((textBox1.Text == "") && (textBox2.Text == ""))
 			{
@@ -84,18 +63,10 @@ namespace LogIn
 			//============================================
 			else if ((myString == "0") || (myString == "1"))
 			{
-				/*if (myString == "0")
-				{
-					MessageBox.Show("User");
-				}
-				else if (myString == "1")
-				{
-					MessageBox.Show("Admin");
-
-				}*/
 				Home y = new Home();
-				y.Show();
 				this.Hide();
+				y.ShowDialog();
+				this.Close();
 			}
 			//============================================
 			else
@@ -103,8 +74,9 @@ namespace LogIn
 				MessageBox.Show("Wrong credentials.");
 			}
 
-
-
+			//Close the connection and dispose of the commands:
+			command0.Dispose();
+			cnn.Close();
 		}
 	}
 }

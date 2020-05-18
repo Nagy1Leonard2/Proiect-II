@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace LogIn
@@ -9,13 +8,13 @@ namespace LogIn
 		public Home()
 		{
 			InitializeComponent();
+
+			// Logic for the Admin version:
 			inde = Login.myString;
-			
 			if (inde == "1")
 			{
 				label4.Show();
 				label5.Show();
-
 			}
 			else
 			{
@@ -23,19 +22,10 @@ namespace LogIn
 				label5.Hide();
 			}
 		}
-		//to do: panel backColor black
-		//to do: logo in the top left corner
-		//to do: left panel to be black
-		//to do: design left panel buttons
-		//to do: search icon transparent background
-		//to do: logout function
-		//to do: background black
-		//to do: input box on search button press
-		//to do: display data from db in userControls
-		//to do: pagination (length from db)
 
 		private void OnClick(object sender, EventArgs e)
 		{
+			// Display userControls logic:
 			if (sender is Button)
 			{
 				Button btn = sender as Button;
@@ -80,6 +70,8 @@ namespace LogIn
 					userControl_Search_Title1.Hide();
 					userControl_Search_Genre1.Hide();
 					userControl_Search_DateTime1.Hide();
+
+					userControl_Genre1.DisplayMovies();
 				}
 				else if (btn.Parent == userControl_Search_Rating1)
 				{
@@ -94,20 +86,18 @@ namespace LogIn
 					userControl_Search_Title1.Hide();
 					userControl_Search_Genre1.Hide();
 					userControl_Search_DateTime1.Hide();
+
+					userControl_Rating1.DisplayMovies();
 				}
 			}
 		}
 
 		public static string qt = "";
 		public static string inde = "";
+
 		private void Home_Load(object sender, EventArgs e)
 		{
-			string connetionString;
-			SqlConnection cnn;
-			connetionString = @"Data Source =DESKTOP-CJRBB7E; Initial Catalog = BookingDB; Integrated Security = True";
-			cnn = new SqlConnection(connetionString);
-			cnn.Open();
-
+			// Show the Main userControl:
 			userControl_Main1.Show();
 			userControl_Main1.BringToFront();
 
@@ -119,25 +109,11 @@ namespace LogIn
 			userControl_Search_Title1.Hide();
 			userControl_Search_Genre1.Hide();
 			userControl_Search_DateTime1.Hide();
-
-
-			inde = Login.myString;
-			MessageBox.Show(inde);
-			if(inde == "1")
-			{
-				label4.Show();
-				label5.Show();
-				
-			}
-			else
-			{
-				label4.Hide();
-				label5.Hide();
-			}
 		}
 		
 		private void Label1_Click(object sender, EventArgs e)
 		{
+			// Close the form on X_label click:
 			Close();
 		}
 
@@ -207,6 +183,7 @@ namespace LogIn
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			// Show Home again:
 			userControl_DateTime1.Hide();
 			userControl_Genre1.Hide();
 			userControl_Rating1.Hide();
@@ -218,11 +195,6 @@ namespace LogIn
 
 			userControl_Main1.Show();
 			userControl_Main1.BringToFront();
-		}
-
-		private void panel2_Paint(object sender, PaintEventArgs e)
-		{
-
 		}
 	}
 }

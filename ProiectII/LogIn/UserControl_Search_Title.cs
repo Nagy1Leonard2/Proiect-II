@@ -24,46 +24,23 @@ namespace LogIn
 		{
 			InitializeComponent();
 			button1.Click += OnClick;
-		}
 
-		private void textBox1_TextChanged(object sender, EventArgs e)
-		{
-			
-		}
-
-		private void button1_Click(object sender, EventArgs e)
-		{
-			string connetionString;
-			SqlConnection cnn;
-			connetionString = @"Data Source =DESKTOP-CJRBB7E; Initial Catalog = BookingDB; Integrated Security = True";
-			cnn = new SqlConnection(connetionString);
+			// Database Connection:
+			SqlConnection cnn = new SqlConnection(@"Data Source = LPTVIVIANACSA\SQLSERVER01; Initial Catalog = BookingDB; Integrated Security = True");
 			cnn.Open();
 
-			SqlCommand command;
-			//SqlDataReader dataReader;
-			String sql;
-			SqlParameter title = new SqlParameter();
-
-			title.ParameterName = "@title";
-			sql = "Select Title from Movie where Title=@title";
-
-			command = new SqlCommand(sql, cnn);
-			command.Parameters.AddWithValue("@title", (comboBox1.Text));
-			SqlDataReader da = command.ExecuteReader();
-
-			var myString = "";
-
-			while (da.Read())
+			// Select statement: 
+			SqlCommand command0 = new SqlCommand("Select Title from Movies order by Title", cnn);
+			SqlDataReader dR = command0.ExecuteReader();
+			while (dR.Read())
 			{
-				myString = da.GetString(0);
-
+				comboBox1.Items.Add(dR["Title"]);
 			}
 
-		}
-
-		private void label1_Click(object sender, EventArgs e)
-		{
-
+			// Close the connection and dispose of the commands:
+			command0.Dispose();
+			dR.Close();
+			cnn.Close();
 		}
 	}
 }

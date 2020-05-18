@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace LogIn
 {
@@ -17,9 +9,12 @@ namespace LogIn
 			InitializeComponent();
 		}
 
-		private void label1_Click(object sender, EventArgs e)
+		public void DisplayMovies()
 		{
-
+			foreach (var title in UserControl_Search_Genre.st)
+			{
+				MessageBox.Show(title);
+			}
 		}
 	}
 }

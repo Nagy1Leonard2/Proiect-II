@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace LogIn
@@ -15,6 +8,34 @@ namespace LogIn
 		public UserControl_Rating()
 		{
 			InitializeComponent();
+		}
+
+		public void DisplayMovies()
+		{
+			// Database Connection:
+			SqlConnection cnn = new SqlConnection(@"Data Source = LPTVIVIANACSA\SQLSERVER01; Initial Catalog = BookingDB; Integrated Security = True");
+			cnn.Open();
+
+
+			// Select statement: 
+			SqlCommand command0 = new SqlCommand("Select Title from Movies where RatingIMDB > @min and RatingIMDB < @max order by RatingIMDB", cnn);
+			SqlParameter min = new SqlParameter();
+			SqlParameter max = new SqlParameter();
+			min.ParameterName = "@min";
+			max.ParameterName = "@max";
+			command0.Parameters.AddWithValue("@min", UserControl_Search_Rating.Min);
+			command0.Parameters.AddWithValue("@max", UserControl_Search_Rating.Max);
+			using (command0)
+			{
+				SqlDataReader dR = command0.ExecuteReader();
+				using (dR)
+				{
+					while (dR.Read())
+					{
+						MessageBox.Show(dR["Title"].ToString());
+					}
+				}
+			}
 		}
 	}
 }

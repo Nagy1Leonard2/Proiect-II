@@ -30,6 +30,11 @@ namespace LogIn
 		{
 			InitializeComponent();
 			button1.Click += OnClick;
+
+			// DateTime format:
+			dateTimePicker2.Format = DateTimePickerFormat.Custom;
+			dateTimePicker2.CustomFormat = "hh:mm tt";
+			dateTimePicker2.ShowUpDown = true;
 		}
 
 	}

@@ -45,7 +45,6 @@
             this.label1.Size = new System.Drawing.Size(153, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Please Enter a Title";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -59,7 +58,6 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 

@@ -60,3 +60,24 @@ E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.csproj.GenerateResource.cach
 E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.csproj.CoreCompileInputs.cache
 E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.exe
 E:\Proiect II\Clone\ProiectII\LogIn\obj\Debug\LogIn.pdb
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\bin\Debug\LogIn.exe.config
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\bin\Debug\LogIn.exe
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\bin\Debug\LogIn.pdb
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.BookingSeatsScreen.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.Home.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.Login.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.Properties.Resources.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.UserControl_DateTime.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Genre.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Main.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Rating.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_DateTime.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Genre.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Rating.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Search_Title.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.UserControl_Title.resources
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.csproj.GenerateResource.cache
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.csproj.CoreCompileInputs.cache
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.exe
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.pdb
+C:\Users\vpopa\Downloads\Proiect-II-master\ProiectII\LogIn\obj\Debug\LogIn.csprojAssemblyReference.cache
