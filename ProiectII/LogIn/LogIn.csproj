@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Movie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Add_Movie.Designer.cs">
+      <DependentUpon>Add_Movie.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookingSeatsScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manage_Users.Designer.cs">
+      <DependentUpon>Manage_Users.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

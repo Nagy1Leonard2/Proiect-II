@@ -16,7 +16,7 @@ namespace LogIn
 		{
 			panel1.BackColor = Color.FromArgb(200, 0, 0, 0);
 			// Database Connection:
-			SqlConnection cnn = new SqlConnection(@"Data Source = LPTVIVIANACSA\SQLSERVER01; Initial Catalog = BookingDB; Integrated Security = True");
+			SqlConnection cnn = new SqlConnection(@"Data Source = ALDWYCH; Initial Catalog = BookingDB; Integrated Security = True");
 			cnn.Open();
 
 			s1.BackColor = Color.Red;
