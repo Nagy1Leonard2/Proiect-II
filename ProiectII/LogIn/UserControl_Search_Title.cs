@@ -26,7 +26,7 @@ namespace LogIn
 			button1.Click += OnClick;
 
 			// Database Connection:
-			SqlConnection cnn = new SqlConnection(@"Data Source = ALDWYCH; Initial Catalog = BookingDB; Integrated Security = True");
+			SqlConnection cnn = new SqlConnection(Program.DB_ConnectionString_Booking());
 			cnn.Open();
 
 			// Select statement: 

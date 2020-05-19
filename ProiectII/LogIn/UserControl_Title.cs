@@ -16,7 +16,7 @@ namespace LogIn
 			if (Visible == true)
 			{
 				// Database Connection:
-				SqlConnection cnn = new SqlConnection(@"Data Source = ALDWYCH; Initial Catalog = BookingDB; Integrated Security = True");
+				SqlConnection cnn = new SqlConnection(Program.DB_ConnectionString_Booking());
 				cnn.Open();
 
 
@@ -27,6 +27,7 @@ namespace LogIn
 				command0.Parameters.AddWithValue("@title", UserControl_Search_Title.Movie);
 				SqlDataReader dR = command0.ExecuteReader();
 				string check_Premiere;
+				string ageRestr;
 				while (dR.Read())
 				{
 					label1.Text = dR["Title"].ToString();
@@ -36,7 +37,8 @@ namespace LogIn
 					label14.Text = dR["Cast"].ToString();
 					label13.Text = dR["Creator"].ToString();
 					label12.Text = dR["Duration"].ToString();
-					label11.Text = dR["Restrictions"].ToString();
+					ageRestr = dR["Restrictions"].ToString();
+					label11.Text = ageRestr + "+";
 					check_Premiere = dR["Premiere"].ToString();
 					if (check_Premiere == "0")
 					{

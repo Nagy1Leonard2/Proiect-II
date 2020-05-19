@@ -42,6 +42,8 @@ namespace LogIn
 					userControl_Search_Title1.Hide();
 					userControl_Search_Genre1.Hide();
 					userControl_Search_DateTime1.Hide();
+					add_Movie1.Hide();
+					manage_Users1.Hide();
 				}
 				else if (btn.Parent == userControl_Search_DateTime1)
 				{
@@ -56,6 +58,8 @@ namespace LogIn
 					userControl_Search_Title1.Hide();
 					userControl_Search_Genre1.Hide();
 					userControl_Search_DateTime1.Hide();
+					add_Movie1.Hide();
+					manage_Users1.Hide();
 				}
 				else if (btn.Parent == userControl_Search_Genre1)
 				{
@@ -70,6 +74,8 @@ namespace LogIn
 					userControl_Search_Title1.Hide();
 					userControl_Search_Genre1.Hide();
 					userControl_Search_DateTime1.Hide();
+					add_Movie1.Hide();
+					manage_Users1.Hide();
 
 					userControl_Genre1.DisplayMovies();
 				}
@@ -86,6 +92,8 @@ namespace LogIn
 					userControl_Search_Title1.Hide();
 					userControl_Search_Genre1.Hide();
 					userControl_Search_DateTime1.Hide();
+					add_Movie1.Hide();
+					manage_Users1.Hide();
 
 					userControl_Rating1.DisplayMovies();
 				}
@@ -109,6 +117,8 @@ namespace LogIn
 			userControl_Search_Title1.Hide();
 			userControl_Search_Genre1.Hide();
 			userControl_Search_DateTime1.Hide();
+			add_Movie1.Hide();
+			manage_Users1.Hide();
 		}
 		
 		private void Label1_Click(object sender, EventArgs e)
@@ -133,6 +143,8 @@ namespace LogIn
 			userControl_Genre1.Hide();
 			userControl_Rating1.Hide();
 			userControl_Title1.Hide();
+			add_Movie1.Hide();
+			manage_Users1.Hide();
 		}
 
 		private void button3_Click(object sender, EventArgs e)
@@ -147,6 +159,8 @@ namespace LogIn
 			userControl_Genre1.Hide();
 			userControl_Rating1.Hide();
 			userControl_Title1.Hide();
+			add_Movie1.Hide();
+			manage_Users1.Hide();
 		}
 
 		private void button4_Click(object sender, EventArgs e)
@@ -161,6 +175,8 @@ namespace LogIn
 			userControl_Genre1.Hide();
 			userControl_Rating1.Hide();
 			userControl_Title1.Hide();
+			add_Movie1.Hide();
+			manage_Users1.Hide();
 		}
 
 		private void button5_Click(object sender, EventArgs e)
@@ -179,6 +195,8 @@ namespace LogIn
 			userControl_Genre1.Hide();
 			userControl_Rating1.Hide();
 			userControl_Title1.Hide();
+			add_Movie1.Hide();
+			manage_Users1.Hide();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -192,6 +210,8 @@ namespace LogIn
 			userControl_Search_Title1.Hide();
 			userControl_Search_Genre1.Hide();
 			userControl_Search_DateTime1.Hide();
+			add_Movie1.Hide();
+			manage_Users1.Hide();
 
 			userControl_Main1.Show();
 			userControl_Main1.BringToFront();
@@ -208,8 +228,20 @@ namespace LogIn
 
 		private void label4_Click(object sender, EventArgs e)
 		{
-			
+			//Show Add Movies control
+			userControl_DateTime1.Hide();
+			userControl_Genre1.Hide();
+			userControl_Rating1.Hide();
+			userControl_Title1.Hide();
+			userControl_Search_Rating1.Hide();
+			userControl_Search_Title1.Hide();
+			userControl_Search_Genre1.Hide();
+			userControl_Search_DateTime1.Hide();
+			userControl_Main1.Hide();
+			manage_Users1.Hide();
 
+			add_Movie1.Show();
+			add_Movie1.BringToFront();
 		}
 	}
 }

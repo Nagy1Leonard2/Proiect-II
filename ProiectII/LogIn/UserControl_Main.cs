@@ -1,5 +1,4 @@
-﻿using System.Data.SqlClient;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace LogIn
 {
@@ -8,9 +7,6 @@ namespace LogIn
 		public UserControl_Main()
 		{
 			InitializeComponent();
-			// Database Connection:
-			SqlConnection cnn = new SqlConnection(@"Data Source = ALDWYCH; Initial Catalog = BookingDB; Integrated Security = True");
-			cnn.Open();
 		}
 	}
 }

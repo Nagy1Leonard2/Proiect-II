@@ -44,7 +44,7 @@ namespace LogIn
 		private void button1_Click(object sender, EventArgs e)
 		{
 			// Database Connection:
-			SqlConnection cnn = new SqlConnection(@"Data Source = ALDWYCH; Initial Catalog = BookingDB; Integrated Security = True");
+			SqlConnection cnn = new SqlConnection(Program.DB_ConnectionString_Booking());
 			cnn.Open();
 
 			
