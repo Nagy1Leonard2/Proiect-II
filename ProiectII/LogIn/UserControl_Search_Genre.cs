@@ -44,7 +44,7 @@ namespace LogIn
 		private void button1_Click(object sender, EventArgs e)
 		{
 			// Database Connection:
-			SqlConnection cnn = new SqlConnection(@"Data Source = ALDWYCH; Initial Catalog = BookingDB; Integrated Security = True");
+			SqlConnection cnn = new SqlConnection(@"Data Source = LPTVIVIANACSA\SQLSERVER01; Initial Catalog = BookingDB; Integrated Security = True");
 			cnn.Open();
 
 			
@@ -64,6 +64,10 @@ namespace LogIn
 					}
 				}
 			}
+
+			// Disposal:
+			command0.Dispose();
+			cnn.Close();
 		}
 	}
 }

@@ -45,7 +45,6 @@
 			this.label12 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -111,7 +110,7 @@
 			this.pictureBox8.BackgroundImage = global::LogIn.Properties.Resources.MoviePoster;
 			this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.pictureBox8.Location = new System.Drawing.Point(523, 256);
-			this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox8.Name = "pictureBox8";
 			this.pictureBox8.Size = new System.Drawing.Size(128, 155);
 			this.pictureBox8.TabIndex = 107;
@@ -122,7 +121,7 @@
 			this.pictureBox7.BackgroundImage = global::LogIn.Properties.Resources.MoviePoster;
 			this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.pictureBox7.Location = new System.Drawing.Point(355, 256);
-			this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox7.Name = "pictureBox7";
 			this.pictureBox7.Size = new System.Drawing.Size(128, 155);
 			this.pictureBox7.TabIndex = 106;
@@ -133,7 +132,7 @@
 			this.pictureBox6.BackgroundImage = global::LogIn.Properties.Resources.MoviePoster;
 			this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.pictureBox6.Location = new System.Drawing.Point(187, 256);
-			this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox6.Name = "pictureBox6";
 			this.pictureBox6.Size = new System.Drawing.Size(128, 155);
 			this.pictureBox6.TabIndex = 105;
@@ -144,7 +143,7 @@
 			this.pictureBox5.BackgroundImage = global::LogIn.Properties.Resources.MoviePoster;
 			this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.pictureBox5.Location = new System.Drawing.Point(19, 256);
-			this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox5.Name = "pictureBox5";
 			this.pictureBox5.Size = new System.Drawing.Size(128, 155);
 			this.pictureBox5.TabIndex = 104;
@@ -191,7 +190,7 @@
 			this.pictureBox4.BackgroundImage = global::LogIn.Properties.Resources.MoviePoster;
 			this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.pictureBox4.Location = new System.Drawing.Point(523, 58);
-			this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox4.Name = "pictureBox4";
 			this.pictureBox4.Size = new System.Drawing.Size(128, 155);
 			this.pictureBox4.TabIndex = 100;
@@ -202,7 +201,7 @@
 			this.pictureBox3.BackgroundImage = global::LogIn.Properties.Resources.MoviePoster;
 			this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.pictureBox3.Location = new System.Drawing.Point(355, 58);
-			this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox3.Name = "pictureBox3";
 			this.pictureBox3.Size = new System.Drawing.Size(128, 155);
 			this.pictureBox3.TabIndex = 99;
@@ -213,7 +212,7 @@
 			this.pictureBox2.BackgroundImage = global::LogIn.Properties.Resources.MoviePoster;
 			this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.pictureBox2.Location = new System.Drawing.Point(187, 58);
-			this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(128, 155);
 			this.pictureBox2.TabIndex = 98;
@@ -255,24 +254,12 @@
 			this.label10.TabIndex = 95;
 			this.label10.Text = "Next";
 			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Calibri", 12F);
-			this.label2.ForeColor = System.Drawing.Color.Salmon;
-			this.label2.Location = new System.Drawing.Point(59, 217);
-			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(47, 24);
-			this.label2.TabIndex = 94;
-			this.label2.Text = "Title";
-			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.BackgroundImage = global::LogIn.Properties.Resources.MoviePoster;
 			this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.pictureBox1.Location = new System.Drawing.Point(19, 58);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(128, 155);
 			this.pictureBox1.TabIndex = 93;
@@ -311,7 +298,6 @@
 			this.Controls.Add(this.label12);
 			this.Controls.Add(this.label11);
 			this.Controls.Add(this.label10);
-			this.Controls.Add(this.label2);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.label1);
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -349,7 +335,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
     }

@@ -13,7 +13,7 @@ namespace LogIn
 		public void DisplayMovies()
 		{
 			// Database Connection:
-			SqlConnection cnn = new SqlConnection(@"Data Source = ALDWYCH; Initial Catalog = BookingDB; Integrated Security = True");
+			SqlConnection cnn = new SqlConnection(@"Data Source = LPTVIVIANACSA\SQLSERVER01; Initial Catalog = BookingDB; Integrated Security = True");
 			cnn.Open();
 
 

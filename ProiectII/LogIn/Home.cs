@@ -196,5 +196,14 @@ namespace LogIn
 			userControl_Main1.Show();
 			userControl_Main1.BringToFront();
 		}
+
+		private void label2_Click(object sender, EventArgs e)
+		{
+			// Logout:
+			Login x = new Login();
+			this.Hide();
+			x.ShowDialog();
+			this.Close();
+		}
 	}
 }

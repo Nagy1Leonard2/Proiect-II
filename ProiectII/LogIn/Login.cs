@@ -30,7 +30,7 @@ namespace LogIn
 		private void Button1_Click(object sender, EventArgs e)
 		{
 			//Sql Conenction:
-			SqlConnection cnn = new SqlConnection(@"Data Source = ALDWYCH; Initial Catalog = UsersDB; Integrated Security = True");
+			SqlConnection cnn = new SqlConnection(@"Data Source = LPTVIVIANACSA\SQLSERVER01; Initial Catalog = UsersDB; Integrated Security = True");
 			cnn.Open();
 
 			//Select statement to retrieve if the user is Admin or not:
@@ -67,6 +67,15 @@ namespace LogIn
 				this.Hide();
 				y.ShowDialog();
 				this.Close();
+
+				// Go back to Home from the BookingSeatsScreen method:
+				using (var form2 = y)
+				{
+					if (form2.ShowDialog() == DialogResult.OK)
+					{
+						y.Hide();
+					}
+				}
 			}
 			//============================================
 			else
