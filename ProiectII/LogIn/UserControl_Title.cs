@@ -16,7 +16,7 @@ namespace LogIn
 			if (Visible == true)
 			{
 				// Database Connection:
-				SqlConnection cnn = new SqlConnection(@"Data Source = LPTVIVIANACSA\SQLSERVER01; Initial Catalog = BookingDB; Integrated Security = True");
+				SqlConnection cnn = new SqlConnection(@"Data Source = ALDWYCH; Initial Catalog = BookingDB; Integrated Security = True");
 				cnn.Open();
 
 
@@ -66,6 +66,11 @@ namespace LogIn
 
 			BookingSeatsScreen bk = new BookingSeatsScreen();
 			bk.ShowDialog();
+		}
+
+		private void label15_Click(object sender, System.EventArgs e)
+		{
+
 		}
 	}
 }
