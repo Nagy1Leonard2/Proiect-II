@@ -273,7 +273,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Add_Movie";
-            this.Size = new System.Drawing.Size(502, 400);
+            this.Size = new System.Drawing.Size(502, 450);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

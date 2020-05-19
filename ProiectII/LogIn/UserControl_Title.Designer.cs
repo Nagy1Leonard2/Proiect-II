@@ -337,9 +337,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserControl_Title";
-            this.Size = new System.Drawing.Size(502, 400);
+            this.Size = new System.Drawing.Size(502, 450);
             this.VisibleChanged += new System.EventHandler(this.UserControl_Title_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

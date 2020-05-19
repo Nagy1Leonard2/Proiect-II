@@ -49,7 +49,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "Manage_Users";
-            this.Size = new System.Drawing.Size(502, 400);
+            this.Size = new System.Drawing.Size(502, 450);
             this.ResumeLayout(false);
             this.PerformLayout();
 
