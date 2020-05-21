@@ -75,7 +75,7 @@ namespace LogIn
 					while (dataR.Read())
 					{
 						date0 = DateTime.Parse(dataR["Date"].ToString());
-						date1 = date0.ToString("dddd dd, MMMM, yyyy");
+						date1 = date0.ToString("dddd dd, MMMM yyyy");
 						time0 = DateTime.Parse(dataR["Time"].ToString());
 						time1 = time0.ToString("hh:mm tt");
 						comboBox1.Items.Add(date1+" - "+time1);
@@ -89,8 +89,12 @@ namespace LogIn
 			}
 		}
 
+		public static string Book = "";
+
 		private void button1_Click(object sender, System.EventArgs e)
 		{
+			Book = comboBox1.Text;
+
 			this.ParentForm.DialogResult = DialogResult.OK;
 
 			BookingSeatsScreen bk = new BookingSeatsScreen();
