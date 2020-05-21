@@ -69,10 +69,5 @@ namespace LogIn
 			BookingSeatsScreen bk = new BookingSeatsScreen();
 			bk.ShowDialog();
 		}
-
-		private void label15_Click(object sender, System.EventArgs e)
-		{
-
-		}
 	}
 }

@@ -244,9 +244,22 @@ namespace LogIn
 			add_Movie1.BringToFront();
 		}
 
-		private void panel2_Paint(object sender, PaintEventArgs e)
+		private void label5_Click(object sender, EventArgs e)
 		{
+			//Show Manage Users control
+			userControl_DateTime1.Hide();
+			userControl_Genre1.Hide();
+			userControl_Rating1.Hide();
+			userControl_Title1.Hide();
+			userControl_Search_Rating1.Hide();
+			userControl_Search_Title1.Hide();
+			userControl_Search_Genre1.Hide();
+			userControl_Search_DateTime1.Hide();
+			userControl_Main1.Hide();
+			add_Movie1.Hide();
 
+			manage_Users1.Show();
+			manage_Users1.BringToFront();
 		}
 	}
 }

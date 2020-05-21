@@ -229,7 +229,6 @@
             this.label15.Size = new System.Drawing.Size(35, 19);
             this.label15.TabIndex = 133;
             this.label15.Text = "Null";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 
