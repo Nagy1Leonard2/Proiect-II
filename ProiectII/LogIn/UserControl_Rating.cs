@@ -90,19 +90,19 @@ namespace LogIn
 
 					// 2nd row:
 					case 5:
-						ShowTitle(labels, title, x, y + 176);
+						ShowTitle(labels, title, x, y + 186);
 						pos++;
 						break;
 					case 6:
-						ShowTitle(labels, title, x + 125, y + 176);
+						ShowTitle(labels, title, x + 125, y + 186);
 						pos++;
 						break;
 					case 7:
-						ShowTitle(labels, title, x + 252, y + 176);
+						ShowTitle(labels, title, x + 252, y + 186);
 						pos++;
 						break;
 					case 8:
-						ShowTitle(labels, title, x + 378, y + 176);
+						ShowTitle(labels, title, x + 378, y + 186);
 						pos++;
 						break;
 					default:
