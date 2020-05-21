@@ -212,9 +212,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(54)))), ((int)(((byte)(65)))));
-            this.button1.Location = new System.Drawing.Point(52, 10);
+            this.button1.Location = new System.Drawing.Point(52, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 43);
+            this.button1.Size = new System.Drawing.Size(96, 35);
             this.button1.TabIndex = 155;
             this.button1.Text = "Add Photo";
             this.button1.UseVisualStyleBackColor = true;
@@ -225,9 +225,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(54)))), ((int)(((byte)(65)))));
-            this.button2.Location = new System.Drawing.Point(356, 10);
+            this.button2.Location = new System.Drawing.Point(355, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 43);
+            this.button2.Size = new System.Drawing.Size(96, 35);
             this.button2.TabIndex = 156;
             this.button2.Text = "Add Movie";
             this.button2.UseVisualStyleBackColor = true;

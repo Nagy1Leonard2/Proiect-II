@@ -282,9 +282,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(54)))), ((int)(((byte)(65)))));
-            this.button1.Location = new System.Drawing.Point(381, 315);
+            this.button1.Location = new System.Drawing.Point(381, 327);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 40);
+            this.button1.Size = new System.Drawing.Size(75, 33);
             this.button1.TabIndex = 138;
             this.button1.Text = "Book";
             this.button1.UseVisualStyleBackColor = false;

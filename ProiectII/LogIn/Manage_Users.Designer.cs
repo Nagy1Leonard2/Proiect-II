@@ -158,9 +158,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(54)))), ((int)(((byte)(65)))));
-            this.button1.Location = new System.Drawing.Point(17, 343);
+            this.button1.Location = new System.Drawing.Point(28, 313);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 43);
+            this.button1.Size = new System.Drawing.Size(114, 35);
             this.button1.TabIndex = 150;
             this.button1.Text = "Add User";
             this.button1.UseVisualStyleBackColor = false;
@@ -172,9 +172,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(54)))), ((int)(((byte)(65)))));
-            this.button2.Location = new System.Drawing.Point(194, 343);
+            this.button2.Location = new System.Drawing.Point(194, 313);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 43);
+            this.button2.Size = new System.Drawing.Size(114, 35);
             this.button2.TabIndex = 151;
             this.button2.Text = "Delete User";
             this.button2.UseVisualStyleBackColor = false;
@@ -186,9 +186,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(54)))), ((int)(((byte)(65)))));
-            this.button3.Location = new System.Drawing.Point(371, 343);
+            this.button3.Location = new System.Drawing.Point(360, 313);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 43);
+            this.button3.Size = new System.Drawing.Size(114, 35);
             this.button3.TabIndex = 152;
             this.button3.Text = "Save Changes";
             this.button3.UseVisualStyleBackColor = false;
