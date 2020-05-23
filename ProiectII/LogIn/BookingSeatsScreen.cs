@@ -1,10 +1,6 @@
-﻿using DotLiquid.Util;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace LogIn
@@ -250,8 +246,8 @@ namespace LogIn
 
 		private void s2_MouseDoubleClick(object sender, MouseEventArgs e)
 		{
-			s1.Image = Properties.Resources.icon8_user_male_52_grey;
-			s1.SizeMode = PictureBoxSizeMode.StretchImage;
+			s2.Image = Properties.Resources.icon8_user_male_52_grey;
+			s2.SizeMode = PictureBoxSizeMode.StretchImage;
 		}
 
 		private void s3_MouseClick(object sender, MouseEventArgs e)
@@ -464,8 +460,8 @@ namespace LogIn
 
 		private void s19_MouseClick(object sender, MouseEventArgs e)
 		{
-			s18.Image = Properties.Resources.icons8_user_male_52_green;
-			s18.SizeMode = PictureBoxSizeMode.StretchImage;
+			s19.Image = Properties.Resources.icons8_user_male_52_green;
+			s19.SizeMode = PictureBoxSizeMode.StretchImage;
 			s19.Tag = "Checked";
 		}
 
@@ -549,8 +545,8 @@ namespace LogIn
 
 		private void s25_MouseDoubleClick(object sender, MouseEventArgs e)
 		{
-			s24.Image = Properties.Resources.icon8_user_male_52_grey;
-			s24.SizeMode = PictureBoxSizeMode.StretchImage;
+			s25.Image = Properties.Resources.icon8_user_male_52_grey;
+			s25.SizeMode = PictureBoxSizeMode.StretchImage;
 		}
 
 		private void s26_MouseClick(object sender, MouseEventArgs e)

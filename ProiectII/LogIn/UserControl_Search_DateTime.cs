@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LogIn
@@ -31,11 +24,12 @@ namespace LogIn
 			InitializeComponent();
 			button1.Click += OnClick;
 
-			// DateTime format:
-			dateTimePicker2.Format = DateTimePickerFormat.Custom;
-			dateTimePicker2.CustomFormat = "hh:mm tt";
-			dateTimePicker2.ShowUpDown = true;
 		}
 
+		public static DateTime dt;
+		private void button1_Click(object sender, EventArgs e)
+		{
+			dt = dateTimePicker1.Value;
+		}
 	}
 }

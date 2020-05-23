@@ -30,7 +30,7 @@ namespace LogIn
 				SqlDataReader dR = command0.ExecuteReader();
 				string check_Premiere;
 				string ageRestr;
-				List<string> st = new List<string>();
+				string st = "";
 				while (dR.Read())
 				{
 					label1.Text = dR["Title"].ToString();
@@ -42,6 +42,7 @@ namespace LogIn
 					label12.Text = dR["Duration"].ToString();
 					ageRestr = dR["Restrictions"].ToString();
 					label11.Text = ageRestr + "+";
+					label11.BorderStyle = BorderStyle.FixedSingle;
 					check_Premiere = dR["Premiere"].ToString();
 					if (check_Premiere == "0")
 					{
@@ -56,7 +57,9 @@ namespace LogIn
 					label18.AutoSize = true;
 					label18.Text = dR["Descriprion"].ToString();
 					label19.Text = dR["Price"].ToString();
-					st.Add(dR["Id"].ToString());
+					st = dR["Id"].ToString();
+					comboBox1.Items.Clear();
+					comboBox1.ResetText();
 				}
 				command0.Dispose();
 				dR.Close();
@@ -65,26 +68,24 @@ namespace LogIn
 				DateTime date0;
 				string time1;
 				DateTime time0;
-				foreach (var movie in st)
+				
+				SqlCommand command1 = new SqlCommand("Select * from ScheduledMovies where MovieID = @mId", cnn);
+				SqlParameter mId = new SqlParameter();
+				mId.ParameterName = "@mId";
+				command1.Parameters.AddWithValue("@mId", st);
+				SqlDataReader dataR = command1.ExecuteReader();
+				while (dataR.Read())
 				{
-					SqlCommand command1 = new SqlCommand("Select * from ScheduledMovies where MovieID = @mId", cnn);
-					SqlParameter mId = new SqlParameter();
-					mId.ParameterName = "@mId";
-					command1.Parameters.AddWithValue("@mId", movie);
-					SqlDataReader dataR = command1.ExecuteReader();
-					while (dataR.Read())
-					{
-						date0 = DateTime.Parse(dataR["Date"].ToString());
-						date1 = date0.ToString("dddd dd, MMMM yyyy");
-						time0 = DateTime.Parse(dataR["Time"].ToString());
-						time1 = time0.ToString("hh:mm tt");
-						comboBox1.Items.Add(date1+" - "+time1);
-					}
-
-					// Close the connection and dispose of the commands:
-					command1.Dispose();
-					dataR.Close();
+					date0 = DateTime.Parse(dataR["Date"].ToString());
+					date1 = date0.ToString("dddd dd, MMMM yyyy");
+					time0 = DateTime.Parse(dataR["Time"].ToString());
+					time1 = time0.ToString("hh:mm tt");
+					comboBox1.Items.Add(date1+" - "+time1);
 				}
+
+				// Close the connection and dispose of the commands:
+				command1.Dispose();
+				dataR.Close();
 				cnn.Close();
 			}
 		}
