@@ -96,9 +96,9 @@
             this.label6.ForeColor = System.Drawing.Color.Snow;
             this.label6.Location = new System.Drawing.Point(191, 60);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 21);
+            this.label6.Size = new System.Drawing.Size(73, 21);
             this.label6.TabIndex = 143;
-            this.label6.Text = "Creator:";
+            this.label6.Text = "Director:";
             // 
             // label5
             // 
