@@ -11,16 +11,19 @@ namespace LogIn
 		{
 			InitializeComponent();
 
+			// Show the selected movie and date:
 			label43.Text = UserControl_Search_Title.Movie;
 			label44.Text = UserControl_Title.Book;
 
+			// Show the Booked seats:
 			Show_BookedSeats();
 		}
 
 		private void BookingSeatsScreen_Load(object sender, EventArgs e)
 		{
-			//panel1.BackColor = Color.FromArgb(200, 0, 0, 0);
+			// Variables:
 			string seatId;
+
 			for (int i = 1; i <= 200; i++)
 			{
 				seatId = "s" + i.ToString();
@@ -28,11 +31,13 @@ namespace LogIn
 			}
 		}
 
+		// Close form when 'X' is pressed:
 		private void Label1_Click(object sender, EventArgs e)
 		{
 			Close();
 		}
 
+		// Go to Home when 'Home' is pressed:
 		private void label2_Click(object sender, EventArgs e)
 		{
 			Home y = new Home();
@@ -43,19 +48,21 @@ namespace LogIn
 
 		public void Show_BookedSeats()
 		{
+			// Variables:
 			string temp = label44.Text;
 			DateTime myDate = DateTime.ParseExact(temp, "dddd dd, MMMM yyyy - hh:mm tt", System.Globalization.CultureInfo.InvariantCulture);
-
 			string str = myDate.ToString("yyyy-MM-dd HH:mm");
-
 			string dt = str.Substring(0, 10);
 			string tm = str.Substring(11);
+			string sm_id = "";
+			List<string> seats = new List<string>();
+			string sId;
+			string seatId;
 
 			// Database Connection:
 			SqlConnection cnn = new SqlConnection(Program.DB_ConnectionString_Booking());
 			cnn.Open();
 
-			
 			// Select statement: 
 			SqlCommand command0 = new SqlCommand("Select Id from ScheduledMovies where Date = @date and Time = @time", cnn);
 			SqlParameter date = new SqlParameter();
@@ -64,7 +71,7 @@ namespace LogIn
 			time.ParameterName = "@time";
 			command0.Parameters.AddWithValue("@date", dt);
 			command0.Parameters.AddWithValue("@time", tm);
-			string sm_id = "";
+			
 			using (command0)
 			{
 				SqlDataReader dR = command0.ExecuteReader();
@@ -77,12 +84,16 @@ namespace LogIn
 				}
 			}
 
-			List<string> seats = new List<string>();
+			// Close and Dispose after use:
+			command0.Parameters.Clear();
+			command0.Dispose();
 
+			// Select statement:
 			SqlCommand command1 = new SqlCommand("Select * from SeatBooking where ScheduledMovieID = @smId", cnn);
 			SqlParameter smId = new SqlParameter();
 			smId.ParameterName = "@smId";
 			command1.Parameters.AddWithValue("@smId", sm_id);
+
 			using (command1)
 			{
 				SqlDataReader dataR = command1.ExecuteReader();
@@ -95,31 +106,41 @@ namespace LogIn
 				}
 			}
 
+			// Close and Dispose after use:
+			command1.Parameters.Clear();
+			command1.Dispose();
+			cnn.Close();
+
 			// Default the seats to empty:
-			string sId;
 			for (int i = 1; i <= 200; i++)
 			{
 				sId = "s" + i.ToString();
+
+				// Create the ToolTip and associate with the Form container.
+				ToolTip toolTip1 = new ToolTip();
+				// Set up the delays for the ToolTip.
+				toolTip1.AutoPopDelay = 5000;
+				toolTip1.InitialDelay = 1000;
+				toolTip1.ReshowDelay = 500;
+				// Force the ToolTip text to be displayed whether or not the form is active.
+				toolTip1.ShowAlways = true;
+				// Set up the ToolTip text for the Button and Checkbox.
+				toolTip1.SetToolTip(((PictureBox)this.panel1.Controls[sId]), "Customer 1");
+
 				((PictureBox)this.panel1.Controls[sId]).Image = Properties.Resources.icon8_user_male_52_grey;
 				((PictureBox)this.panel1.Controls[sId]).SizeMode = PictureBoxSizeMode.StretchImage;
 			}
 
 			// Put the booked seats:
-			string seatId;
 			foreach (var nr in seats)
 			{
 				seatId = "s" + nr;
 				((PictureBox)this.panel1.Controls[seatId]).Image = Properties.Resources.icons8_user_male_52_red;
 				((PictureBox)this.panel1.Controls[seatId]).SizeMode = PictureBoxSizeMode.StretchImage;
 			}
-			
-			//Close connections and dispose commands:
-			command0.Dispose();
-			command1.Dispose();
-			cnn.Close();
 		}
 
-
+		// Book button click _event:
 		private void button1_Click(object sender, EventArgs e)
 		{
 			Book();
@@ -130,12 +151,20 @@ namespace LogIn
 			this.Close();
 		}
 
-		
+		// The Book logic:
 		public void Book()
 		{
-
+			// Variables:
 			List<string> str = new List<string>();
 			string seatId;
+			string temp = label44.Text;
+			DateTime myDate = DateTime.ParseExact(temp, "dddd dd, MMMM yyyy - hh:mm tt", System.Globalization.CultureInfo.InvariantCulture);
+			string stri = myDate.ToString("yyyy-MM-dd HH:mm");
+			string dt = stri.Substring(0, 10);
+			string tm = stri.Substring(11);
+			string sm_id = "";
+			string roSeatId;
+
 			for (int i = 1; i <= 200; i++)
 			{
 				seatId = "s" + i.ToString();
@@ -145,24 +174,11 @@ namespace LogIn
 				}
 			}
 
-			
-
 			// Get the Scheduled Movie Id:
-			string temp = label44.Text;
-			DateTime myDate = DateTime.ParseExact(temp, "dddd dd, MMMM yyyy - hh:mm tt", System.Globalization.CultureInfo.InvariantCulture);
-
-			string stri = myDate.ToString("yyyy-MM-dd HH:mm");
-
-			string dt = stri.Substring(0, 10);
-			string tm = stri.Substring(11);
-
-
-
-
+			
 			// Database Connection:
 			SqlConnection cnn = new SqlConnection(Program.DB_ConnectionString_Booking());
 			cnn.Open();
-
 
 			// Select statement: 
 			SqlCommand command0 = new SqlCommand("Select Id from ScheduledMovies where Date = @date and Time = @time", cnn);
@@ -172,7 +188,7 @@ namespace LogIn
 			time.ParameterName = "@time";
 			command0.Parameters.AddWithValue("@date", dt);
 			command0.Parameters.AddWithValue("@time", tm);
-			string sm_id = "";
+			
 			using (command0)
 			{
 				SqlDataReader dR = command0.ExecuteReader();
@@ -185,7 +201,9 @@ namespace LogIn
 				}
 			}
 
-
+			// Close and Dispose after use:
+			command0.Parameters.Clear();
+			command0.Dispose();
 
 			// Book the selected seats:
 
@@ -195,15 +213,15 @@ namespace LogIn
 			SqlParameter sId = new SqlParameter();
 			rsId.ParameterName = "@rsId";
 			sId.ParameterName = "@sId";
-			string roSeatId;
+			
 			using (command1)
 			{
 				foreach (string roomSeatId in str)
 				{
-					//MessageBox.Show(roomSeatId);
 					roSeatId = roomSeatId.Substring(1);
 					command1.Parameters.AddWithValue("@rsId", roSeatId);
 					command1.Parameters.AddWithValue("@sId", sm_id);
+
 					SqlDataAdapter dA = new SqlDataAdapter();
 					dA.InsertCommand = command1;
 					dA.InsertCommand.ExecuteNonQuery();
@@ -214,10 +232,9 @@ namespace LogIn
 			}
 
 			//Close connections and dispose commands:
-			command0.Dispose();
+			command1.Parameters.Clear();
 			command1.Dispose();
 			cnn.Close();
-
 		}
 
 

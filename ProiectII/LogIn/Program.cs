@@ -19,11 +19,16 @@ namespace LogIn
 
 		public static string DB_ConnectionString_Users()
 		{
-			return "Data Source = ALDWYCH; Initial Catalog = UsersDB; Integrated Security = True";
+			return "Data Source = LPTVIVIANACSA\\SQLSERVER01; Initial Catalog = UsersDB; Integrated Security = True";
 		}
 		public static string DB_ConnectionString_Booking()
 		{
-			return "Data Source = ALDWYCH; Initial Catalog = BookingDB; Integrated Security = True";
+			return "Data Source = LPTVIVIANACSA\\SQLSERVER01; Initial Catalog = BookingDB; Integrated Security = True";
+		}
+
+		public static string ImagesFolder()
+		{
+			return "C:\\Users\\vpopa\\Downloads" + "\\Proiect-II-master\\ProiectII\\LogIn\\Images\\";
 		}
 	}
 }

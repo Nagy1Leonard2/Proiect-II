@@ -12,21 +12,23 @@ namespace LogIn
 			add { fClick += value; }
 			remove { fClick -= value; }
 		}
-
 		protected void OnClick(object sender, EventArgs e)
 		{
 			EventHandler handler = fClick;
 			if (fClick != null)
 				handler(sender, e);
 		}
+
 		public UserControl_Search_DateTime()
 		{
 			InitializeComponent();
 			button1.Click += OnClick;
-
 		}
 
+		// Variable used in the next Form:
 		public static DateTime dt;
+
+		// Search button event:
 		private void button1_Click(object sender, EventArgs e)
 		{
 			dt = dateTimePicker1.Value;

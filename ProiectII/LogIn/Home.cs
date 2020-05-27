@@ -39,6 +39,7 @@ namespace LogIn
 			userControl_Search_DateTime1.Hide();
 			add_Movie1.Hide();
 			manage_Users1.Hide();
+			screening_Time1.Hide();
 
 			userControl_Main1.DisplayMovies();
 		}
@@ -64,6 +65,7 @@ namespace LogIn
 					userControl_Search_DateTime1.Hide();
 					add_Movie1.Hide();
 					manage_Users1.Hide();
+					screening_Time1.Hide();
 				}
 				else if (btn.Parent == userControl_Search_DateTime1)
 				{
@@ -80,6 +82,7 @@ namespace LogIn
 					userControl_Search_DateTime1.Hide();
 					add_Movie1.Hide();
 					manage_Users1.Hide();
+					screening_Time1.Hide();
 
 					userControl_DateTime1.DisplayMovies();
 				}
@@ -98,6 +101,7 @@ namespace LogIn
 					userControl_Search_DateTime1.Hide();
 					add_Movie1.Hide();
 					manage_Users1.Hide();
+					screening_Time1.Hide();
 
 					userControl_Genre1.DisplayMovies();
 				}
@@ -116,8 +120,45 @@ namespace LogIn
 					userControl_Search_DateTime1.Hide();
 					add_Movie1.Hide();
 					manage_Users1.Hide();
+					screening_Time1.Hide();
 
 					userControl_Rating1.DisplayMovies();
+				}
+				else if (btn.Parent == add_Movie1)
+				{
+					screening_Time1.Show();
+					screening_Time1.BringToFront();
+
+					userControl_DateTime1.Hide();
+					userControl_Main1.Hide();
+					userControl_Genre1.Hide();
+					userControl_Title1.Hide();
+					userControl_Search_Rating1.Hide();
+					userControl_Search_Title1.Hide();
+					userControl_Search_Genre1.Hide();
+					userControl_Search_DateTime1.Hide();
+					add_Movie1.Hide();
+					manage_Users1.Hide();
+					userControl_Rating1.Hide();
+
+				}
+				else if ((btn.Parent == manage_Users1) || (btn.Parent == screening_Time1))
+				{
+					// Show Home again:
+					userControl_DateTime1.Hide();
+					userControl_Genre1.Hide();
+					userControl_Rating1.Hide();
+					userControl_Title1.Hide();
+					userControl_Search_Rating1.Hide();
+					userControl_Search_Title1.Hide();
+					userControl_Search_Genre1.Hide();
+					userControl_Search_DateTime1.Hide();
+					add_Movie1.Hide();
+					manage_Users1.Hide();
+					screening_Time1.Hide();
+
+					userControl_Main1.Show();
+					userControl_Main1.BringToFront();
 				}
 			}
 		}
@@ -151,6 +192,7 @@ namespace LogIn
 			userControl_Title1.Hide();
 			add_Movie1.Hide();
 			manage_Users1.Hide();
+			screening_Time1.Hide();
 		}
 
 		private void button3_Click(object sender, EventArgs e)
@@ -167,6 +209,7 @@ namespace LogIn
 			userControl_Title1.Hide();
 			add_Movie1.Hide();
 			manage_Users1.Hide();
+			screening_Time1.Hide();
 		}
 
 		private void button4_Click(object sender, EventArgs e)
@@ -183,6 +226,7 @@ namespace LogIn
 			userControl_Title1.Hide();
 			add_Movie1.Hide();
 			manage_Users1.Hide();
+			screening_Time1.Hide();
 		}
 
 		private void button5_Click(object sender, EventArgs e)
@@ -203,6 +247,7 @@ namespace LogIn
 			userControl_Title1.Hide();
 			add_Movie1.Hide();
 			manage_Users1.Hide();
+			screening_Time1.Hide();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -218,6 +263,7 @@ namespace LogIn
 			userControl_Search_DateTime1.Hide();
 			add_Movie1.Hide();
 			manage_Users1.Hide();
+			screening_Time1.Hide();
 
 			userControl_Main1.Show();
 			userControl_Main1.BringToFront();
@@ -245,6 +291,7 @@ namespace LogIn
 			userControl_Search_DateTime1.Hide();
 			userControl_Main1.Hide();
 			manage_Users1.Hide();
+			screening_Time1.Hide();
 
 			add_Movie1.Show();
 			add_Movie1.BringToFront();
@@ -263,6 +310,7 @@ namespace LogIn
 			userControl_Search_DateTime1.Hide();
 			userControl_Main1.Hide();
 			add_Movie1.Hide();
+			screening_Time1.Hide();
 
 			manage_Users1.Show();
 			manage_Users1.BringToFront();

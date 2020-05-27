@@ -1,41 +1,65 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace LogIn
 {
-    public partial class Manage_Users : UserControl
+	public partial class Manage_Users : UserControl
     {
-        public Manage_Users()
+		[NonSerialized]
+		private EventHandler fClick;
+		public event EventHandler Click
+		{
+			add { fClick += value; }
+			remove { fClick -= value; }
+		}
+		protected void OnClick(object sender, EventArgs e)
+		{
+			EventHandler handler = fClick;
+			if (fClick != null)
+				handler(sender, e);
+		}
+
+		public Manage_Users()
         {
             InitializeComponent();
+			button1.Click += OnClick;
+			button2.Click += OnClick;
+			button3.Click += OnClick;
 			General();
 
+			// Visual settings for the Add User button:
 			button1.Cursor = Cursors.Hand;
 			button1.ForeColor = Color.FromArgb(210, 54, 65);
 			button1.Enabled = true;
 
 		}
 
+		// If New User is checked or not:
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 			if (checkBox1.Checked)
 			{
+				// Existing User label:
 				label3.Font = new Font(label3.Font, FontStyle.Strikeout);
 				label3.Cursor = Cursors.No;
+
+				// Existing User comboBox:
 				comboBox1.Items.Clear();
 				comboBox1.ResetText();
 				comboBox1.Enabled = false;
+
+				// Username:
 				textBox1.Text = "";
+
+				// Password:
 				textBox2.Text = "";
+
+				// Rights:
 				comboBox2.ResetText();
+
+				// Visuals for the butttons:
 				button2.ForeColor = Color.FromArgb(129, 137, 150);
 				button2.Enabled = false;
 				button3.ForeColor = Color.FromArgb(129, 137, 150);
@@ -51,31 +75,40 @@ namespace LogIn
 			}
 		}
 
+		// When an existing user is selected:
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			GetUsernameData();
 		}
 
+		// Visuals before any user action:
 		public void General()
 		{
+			// Existing user:
 			comboBox1.Items.Clear();
 			comboBox1.ResetText();
-			label3.Font = new Font(label3.Font, FontStyle.Regular);
 			comboBox1.Enabled = true;
-			button2.Enabled = true;
-			button3.Enabled = true;
+			label3.Font = new Font(label3.Font, FontStyle.Regular);
 			label3.Cursor = Cursors.Default;
+
+			// Delete User:
+			button2.Enabled = true;
 			button2.Cursor = Cursors.Hand;
-			button3.Cursor = Cursors.Hand;
 			button2.ForeColor = Color.FromArgb(210, 54, 65);
+
+			// Save Changes:
+			button3.Enabled = true;
+			button3.Cursor = Cursors.Hand;
 			button3.ForeColor = Color.FromArgb(210, 54, 65);
 
+			// Add User:
 			button1.ForeColor = Color.FromArgb(129, 137, 150);
 			button1.Enabled = false;
 
 			GetUsernames();
 		}
 
+		// Show existing users:
 		public void GetUsernames()
 		{
 			//Sql Conenction:
@@ -84,20 +117,25 @@ namespace LogIn
 
 			// Select statement: 
 			SqlCommand command1 = new SqlCommand("Select Username from Users order by Username", cnn);
+
 			SqlDataReader dataR = command1.ExecuteReader();
 			while (dataR.Read())
 			{
 				comboBox1.Items.Add(dataR["Username"]);
 			}
 
+			// Close the connection and dispose afetr use:
 			command1.Dispose();
 			dataR.Close();
 			cnn.Close();
 		}
 
+		// Show data for existing users:
 		public void GetUsernameData()
 		{
-			
+			// Variables:
+			string rght;
+
 			//Sql Conenction:
 			SqlConnection cnn = new SqlConnection(Program.DB_ConnectionString_Users());
 			cnn.Open();
@@ -108,9 +146,6 @@ namespace LogIn
 			use.ParameterName = "@use";
 			command0.Parameters.AddWithValue("@use", comboBox1.Text);
 
-			string rght;
-
-			//SqlDataReader:
 			SqlDataReader da = command0.ExecuteReader();
 			while (da.Read())
 			{
@@ -128,24 +163,34 @@ namespace LogIn
 			}
 
 			//Close the connection and dispose of the commands:
+			command0.Parameters.Clear();
 			command0.Dispose();
 			da.Close();
 			cnn.Close();
 		}
 
+		// Visuals before any user action:
 		private void Manage_Users_VisibleChanged(object sender, EventArgs e)
 		{
 			if (Visible == true)
 			{
 				General();
 
+				// AddUuser:
 				button1.Cursor = Cursors.Hand;
 				button1.ForeColor = Color.FromArgb(210, 54, 65);
 				button1.Enabled = true;
 
+				// Username:
 				textBox1.Text = "";
+
+				// Password:
 				textBox2.Text = "";
+
+				// Rights:
 				comboBox2.ResetText();
+
+				// New User:
 				checkBox1.Checked = false;
 			}
 		}
@@ -153,6 +198,9 @@ namespace LogIn
 		// Add New User:
 		private void button1_Click(object sender, EventArgs e)
 		{
+			// Variables:
+			string right = comboBox2.Text;
+
 			// Database Connection:
 			SqlConnection cnn = new SqlConnection(Program.DB_ConnectionString_Users());
 			cnn.Open();
@@ -167,7 +215,7 @@ namespace LogIn
 			rght.ParameterName = "@rght";
 			command1.Parameters.AddWithValue("@usr", textBox1.Text);
 			command1.Parameters.AddWithValue("@pass", textBox2.Text);
-			string right = comboBox2.Text;
+
 			if (right == "Admin")
 			{
 				command1.Parameters.AddWithValue("@rght", "1");
@@ -179,7 +227,6 @@ namespace LogIn
 			
 			using (command1)
 			{
-				
 				SqlDataAdapter dA = new SqlDataAdapter();
 				dA.InsertCommand = command1;
 				dA.InsertCommand.ExecuteNonQuery();
@@ -188,16 +235,18 @@ namespace LogIn
 
 				dA.Dispose();
 			}
+
+			// Dispose and close the connection:
 			command1.Parameters.Clear();
 			command1.Dispose();
 			cnn.Close();
 
+			// Set visuals to default:
 			General();
 			button1.Cursor = Cursors.Hand;
 			button1.ForeColor = Color.FromArgb(210, 54, 65);
 			button1.Enabled = true;
 			
-
 			textBox1.Text = "";
 			textBox2.Text = "";
 			comboBox2.ResetText();
@@ -207,6 +256,9 @@ namespace LogIn
 		// Change user details:
 		private void button3_Click(object sender, EventArgs e)
 		{
+			// Variables:
+			string right = comboBox2.Text;
+
 			// Database Connection:
 			SqlConnection cnn = new SqlConnection(Program.DB_ConnectionString_Users());
 			cnn.Open();
@@ -224,7 +276,7 @@ namespace LogIn
 			command1.Parameters.AddWithValue("@initUsr", comboBox1.Text);
 			command1.Parameters.AddWithValue("@usr", textBox1.Text);
 			command1.Parameters.AddWithValue("@pass", textBox2.Text);
-			string right = comboBox2.Text;
+			
 			if (right == "Admin")
 			{
 				command1.Parameters.AddWithValue("@rght", "1");
@@ -236,7 +288,6 @@ namespace LogIn
 
 			using (command1)
 			{
-
 				SqlDataAdapter dA = new SqlDataAdapter();
 				dA.UpdateCommand = command1;
 				dA.UpdateCommand.ExecuteNonQuery();
@@ -245,10 +296,13 @@ namespace LogIn
 
 				dA.Dispose();
 			}
+
+			// Close connection and Dispose:
 			command1.Parameters.Clear();
 			command1.Dispose();
 			cnn.Close();
 
+			// Default visuals:
 			General();
 			button1.Cursor = Cursors.Hand;
 			button1.ForeColor = Color.FromArgb(210, 54, 65);
@@ -275,7 +329,6 @@ namespace LogIn
 
 			using (command1)
 			{
-
 				SqlDataAdapter dA = new SqlDataAdapter();
 				dA.DeleteCommand = command1;
 				dA.DeleteCommand.ExecuteNonQuery();
@@ -284,10 +337,13 @@ namespace LogIn
 
 				dA.Dispose();
 			}
+
+			// Close connection and Dispose:
 			command1.Parameters.Clear();
 			command1.Dispose();
 			cnn.Close();
 
+			// Show default visuals:
 			General();
 			button1.Cursor = Cursors.Hand;
 			button1.ForeColor = Color.FromArgb(210, 54, 65);
