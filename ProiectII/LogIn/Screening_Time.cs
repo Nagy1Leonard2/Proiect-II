@@ -66,6 +66,7 @@ namespace LogIn
 		// Save:
 		private void button1_Click(object sender, EventArgs e)
 		{
+			string dtp = "";
 			// Database Connection:
 			SqlConnection cnn = new SqlConnection(Program.DB_ConnectionString_Booking());
 			cnn.Open();
@@ -84,7 +85,8 @@ namespace LogIn
 			tm.ParameterName = "@tm";
 			command1.Parameters.AddWithValue("@mvId", Add_Movie.id);
 			command1.Parameters.AddWithValue("@rnId", "1");
-			command1.Parameters.AddWithValue("@dt", comboBox2.Text);
+			dtp = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+			command1.Parameters.AddWithValue("@dt", dtp);
 			command1.Parameters.AddWithValue("@tm", comboBox1.Text);
 
 			using (command1)

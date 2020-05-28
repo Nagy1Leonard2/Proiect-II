@@ -73,8 +73,9 @@ namespace LogIn
 				nrPages = nr_fullPages + 1;
 			else
 				nrPages = nr_fullPages;
-		
-			label11.Text = nrPages.ToString();
+
+			//label11.Text = nrPages.ToString();
+			label11.Text = "1";
 
 
 			// Show titles and images:

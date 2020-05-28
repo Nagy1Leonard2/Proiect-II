@@ -35,8 +35,9 @@ namespace LogIn
 				nrPages = nr_fullPages + 1;
 			else
 				nrPages = nr_fullPages;
-		
-			label11.Text = nrPages.ToString();
+
+			//label11.Text = nrPages.ToString();
+			label11.Text = "1";
 
 			// Show titles and images:
 			Panel pn = new Panel();
@@ -136,7 +137,7 @@ namespace LogIn
 		{
 			Panel pn = new Panel();
 			pn.Location = new Point(3, 32);
-			pn.Size = new Size(496, 378);
+			pn.Size = new Size(510, 378);
 			this.Controls.Add(pn);
 
 			return pn;
