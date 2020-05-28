@@ -27,16 +27,16 @@ namespace LogIn
 			button2.Click += OnClick;
 
 			// Add the default values:
-			comboBox1.Items.Add("Action");
-			comboBox1.Items.Add("Anime");
-			comboBox1.Items.Add("Comedy");
-			comboBox1.Items.Add("Crime");
-			comboBox1.Items.Add("Documentary");
-			comboBox1.Items.Add("Drama");
-			comboBox1.Items.Add("Horror");
-			comboBox1.Items.Add("Thriler");
-			comboBox1.Items.Add("Sci-Fi");
-			comboBox1.Items.Add("Romance");
+			comboBox2.Items.Add("Action");
+			comboBox2.Items.Add("Anime");
+			comboBox2.Items.Add("Comedy");
+			comboBox2.Items.Add("Crime");
+			comboBox2.Items.Add("Documentary");
+			comboBox2.Items.Add("Drama");
+			comboBox2.Items.Add("Horror");
+			comboBox2.Items.Add("Thriler");
+			comboBox2.Items.Add("Sci-Fi");
+			comboBox2.Items.Add("Romance");
 		}
 
 		// Variable used in the next Form:

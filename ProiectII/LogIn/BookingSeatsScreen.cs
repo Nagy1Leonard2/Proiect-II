@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LogIn
@@ -89,6 +90,8 @@ namespace LogIn
 			command0.Dispose();
 
 			// Select statement:
+			List<string> customers = new List<string>();
+
 			SqlCommand command1 = new SqlCommand("Select * from SeatBooking where ScheduledMovieID = @smId", cnn);
 			SqlParameter smId = new SqlParameter();
 			smId.ParameterName = "@smId";
@@ -102,6 +105,7 @@ namespace LogIn
 					while (dataR.Read())
 					{
 						seats.Add(dataR["RoomSeatID"].ToString());
+						customers.Add(dataR["CustomerID"].ToString());
 					}
 				}
 			}
@@ -109,12 +113,51 @@ namespace LogIn
 			// Close and Dispose after use:
 			command1.Parameters.Clear();
 			command1.Dispose();
-			cnn.Close();
+
+
+			// Select statement:
+			/*List<string> Names = new List<string>();
+
+			SqlCommand command2 = new SqlCommand("Select * from Customers where Id = @customerId", cnn);
+			SqlParameter customerId = new SqlParameter();
+			customerId.ParameterName = "@customerId";
+			
+			using (command2)
+			{
+				foreach (string ids in customers)
+				{
+					command2.Parameters.AddWithValue("@customerId", ids);
+					SqlDataReader dataR = command2.ExecuteReader();
+
+					using (dataR)
+					{
+						while (dataR.Read())
+						{
+							customers.Add(dataR["FirstName"].ToString());
+							customers.Add(dataR["LastName"].ToString());
+						}
+					}
+				}
+			}*/
+
+			// Close and Dispose after use:
+			/*command2.Parameters.Clear();
+			command2.Dispose();
+			cnn.Close();*/
 
 			// Default the seats to empty:
 			for (int i = 1; i <= 200; i++)
 			{
 				sId = "s" + i.ToString();
+
+				((PictureBox)this.panel1.Controls[sId]).Image = Properties.Resources.icon8_user_male_52_grey;
+				((PictureBox)this.panel1.Controls[sId]).SizeMode = PictureBoxSizeMode.StretchImage;
+			}
+
+			// Put the booked seats:
+			foreach (var nr in seats)
+			{
+				seatId = "s" + nr;
 
 				// Create the ToolTip and associate with the Form container.
 				ToolTip toolTip1 = new ToolTip();
@@ -125,16 +168,8 @@ namespace LogIn
 				// Force the ToolTip text to be displayed whether or not the form is active.
 				toolTip1.ShowAlways = true;
 				// Set up the ToolTip text for the Button and Checkbox.
-				toolTip1.SetToolTip(((PictureBox)this.panel1.Controls[sId]), "Customer 1");
+				toolTip1.SetToolTip(((PictureBox)this.panel1.Controls[seatId]), "Customer 1");
 
-				((PictureBox)this.panel1.Controls[sId]).Image = Properties.Resources.icon8_user_male_52_grey;
-				((PictureBox)this.panel1.Controls[sId]).SizeMode = PictureBoxSizeMode.StretchImage;
-			}
-
-			// Put the booked seats:
-			foreach (var nr in seats)
-			{
-				seatId = "s" + nr;
 				((PictureBox)this.panel1.Controls[seatId]).Image = Properties.Resources.icons8_user_male_52_red;
 				((PictureBox)this.panel1.Controls[seatId]).SizeMode = PictureBoxSizeMode.StretchImage;
 			}
@@ -144,6 +179,7 @@ namespace LogIn
 		private void button1_Click(object sender, EventArgs e)
 		{
 			Book();
+			MessageBox.Show("The seats have beeen booked.");
 
 			Home y = new Home();
 			this.Hide();
@@ -205,15 +241,71 @@ namespace LogIn
 			command0.Parameters.Clear();
 			command0.Dispose();
 
+
+			// Insert Client's First & Last Name:
+
+			// Insert statement: 
+			SqlCommand command2 = new SqlCommand("Insert into Customers (FirstName, LastName) values (@fname, @lname)", cnn);
+			SqlParameter fname = new SqlParameter();
+			SqlParameter lname = new SqlParameter();
+			fname.ParameterName = "@fname";
+			lname.ParameterName = "@lname";
+			command2.Parameters.AddWithValue("@fname", textBox1.Text);
+			command2.Parameters.AddWithValue("@lname", textBox2.Text);
+
+			using (command2)
+			{
+				SqlDataAdapter dA = new SqlDataAdapter();
+				dA.InsertCommand = command2;
+				dA.InsertCommand.ExecuteNonQuery();
+				
+				dA.Dispose();
+				command2.Parameters.Clear();
+			}
+
+			//Close connections and dispose commands:
+			command2.Parameters.Clear();
+			command2.Dispose();
+
+			// Select statement: 
+			string c_id = "";
+
+			SqlCommand command3 = new SqlCommand("Select Id from Customers where FirstName = @fName and LastName = @lName", cnn);
+			SqlParameter fName = new SqlParameter();
+			SqlParameter lName = new SqlParameter();
+			fName.ParameterName = "@fName";
+			lName.ParameterName = "@lName";
+			command3.Parameters.AddWithValue("@fName", textBox1.Text);
+			command3.Parameters.AddWithValue("@lName", textBox2.Text);
+
+			using (command3)
+			{
+				SqlDataReader dR = command3.ExecuteReader();
+				using (dR)
+				{
+					while (dR.Read())
+					{
+						c_id = dR["Id"].ToString();
+					}
+				}
+			}
+
+			// Close and Dispose after use:
+			command3.Parameters.Clear();
+			command3.Dispose();
+
+
 			// Book the selected seats:
 
 			// Insert statement: 
-			SqlCommand command1 = new SqlCommand("Insert into SeatBooking (CustomerID, ScheduledMovieID, RoomSeatID) values (1, @sId, @rsId)", cnn);
+			SqlCommand command1 = new SqlCommand("Insert into SeatBooking (CustomerID, ScheduledMovieID, RoomSeatID) values (@cust_Id, @sId, @rsId)", cnn);
 			SqlParameter rsId = new SqlParameter();
 			SqlParameter sId = new SqlParameter();
+			SqlParameter cust_id = new SqlParameter();
 			rsId.ParameterName = "@rsId";
 			sId.ParameterName = "@sId";
-			
+			sId.ParameterName = "@cust_Id";
+
 			using (command1)
 			{
 				foreach (string roomSeatId in str)
@@ -221,6 +313,7 @@ namespace LogIn
 					roSeatId = roomSeatId.Substring(1);
 					command1.Parameters.AddWithValue("@rsId", roSeatId);
 					command1.Parameters.AddWithValue("@sId", sm_id);
+					command1.Parameters.AddWithValue("@cust_Id", c_id);
 
 					SqlDataAdapter dA = new SqlDataAdapter();
 					dA.InsertCommand = command1;
